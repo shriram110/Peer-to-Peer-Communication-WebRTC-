@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="/screen_client.js" defer></script>
+  <title>screen share</title>
+  <style>
+    #video-grid{
+      grid-template-columns: repeat(auto-fill , 300px);
+      grid-auto-rows: 300px;
+    }
+
+    video{
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+    }
+    img{
+      width: 70px;
+      height: 70px;
+      margin-left: 47%;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web RTC Screen Sharing</h1>
+  <div id="video-grid"></div>
+  <img src="https://cdn2.iconfinder.com/data/icons/weby-flat-vol-2/512/weby-flat_call_end-call_drop-512.png" alt="click to end" onclick="self.close()">
+</body>
+</html>

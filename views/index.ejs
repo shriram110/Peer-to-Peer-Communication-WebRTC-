@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chat app</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+</head>
+<body>
+
+  <section class="chat__section">
+    <div class="brand">
+      <img class="logo "src="webrtc.png" alt="">
+      <h1>Web RTC Communication !</h1>
+      <div class="icons">
+        <a href="http://localhost:3000/voicecall" target="_blank">
+          <img id="voice_call" src="phone.png" alt="">
+        </a>
+        <a href="http://localhost:3000/videocall" target="_blank">
+          <img id="video_call" src="video.png" alt="">
+        </a>
+        <a href="http://localhost:3000/screensharing" target="_blank">
+          <img id="screen_share" src="screen.webp" alt="">
+        </a>
+        <a href="http://localhost:3000/filetransfer" target="_blank">
+          <img id="file_transfer" src="file.jpg" alt="">
+        </a>
+      </div>
+
+    </div>
+
+    <div class="message__area"> </div>
+
+    <div>
+      <textarea name="" id="textarea" cols="30" rows="1" placeholder="write a message"></textarea>
+    </div>
+  </section>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+
+
+</html>
